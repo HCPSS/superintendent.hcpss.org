@@ -1,0 +1,175 @@
+diff --git a/source/css/main.css b/source/css/main.css
+index d5918a4..4101ad6 100644
+--- a/source/css/main.css
++++ b/source/css/main.css
+@@ -20,7 +20,7 @@ body {
+   margin: auto;
+ }
+ #content {
+-  background: rgba(230, 225, 196, 0.9);
++  background: rgba(212, 212, 212, 0.9);
+   padding: 15px;
+   word-wrap: break-word;
+   -ms-word-wrap: break-word;
+@@ -31,7 +31,7 @@ body {
+ /* Links
+ ------------------------------------------------- */
+ a {
+-  color: #8a6119;
++  color: #1c6ba2;
+ }
+ a:hover,
+ a:focus,
+@@ -72,11 +72,12 @@ header {
+ header .site-title a {
+   text-decoration: none;
+   font-size: 48px;
+-  font-family: Roboto, Helvetica, sans-serif;
++  font-family: Georgia, serif;
+   font-weight: lighter;
+   text-shadow: 0px 0px 10px #888;
+ }
+ header .site-description {
++  font-family: Helvetica, sans-serif;
+   font-size: 18px;
+   font-weight: lighter;
+ }
+@@ -112,11 +113,11 @@ _______________________________________________*/
+   text-align: left;
+ }
+ .main-navigation a {
+-  color: #615642;
++  color: #FFFFFF;
+   padding: 25px 15px;
+ }
+ .main-navigation a:hover {
+-  color: #7e5d26;
++  color: #C9E6F5;
+ }
+ .main-navigation ul ul {
+   background: #170d03;
+@@ -126,15 +127,15 @@ _______________________________________________*/
+   padding: 5px 10px;
+ }
+ .main-navigation ul ul a:hover {
+-  background: #615642;
++  background: #d4d4d4;
+   color: #100d0a;
+ }
+ .main-navigation li:hover > a {
+-  color: #7e5d26;
++  color: #d4d4d4;
+   background: #100d0a;
+ }
+ .main-navigation ul ul :hover > a {
+-  background: #615642;
++  background: #d4d4d4;
+   color: #100d0a;
+ }
+ /* Slider Styles
+@@ -238,7 +239,7 @@ h2#page-title:first-letter,
+   font-family: Calibri, Arial, Helvetica, sans-serif;
+   color: #e7e2c5;
+   text-decoration: none;
+-  font-size: small;
++  font-size: large;
+ }
+ .homepage-article h1.entry-title a:hover {
+   color: white;
+@@ -270,7 +271,7 @@ h2#page-title:first-letter,
+ #primary,
+ #secondary {
+   padding: 10px;
+-  background: #e4e0c6;
++  background: #FFFFFF;
+   word-wrap: break-word;
+   -ms-word-wrap: break-word;
+ }
+@@ -291,40 +292,43 @@ h2#page-title:first-letter,
+   margin-bottom: 15px;
+ }
+ .single-post .featured-image-single img {
+-  border: solid 10px #ece5be;
++  border: solid 10px #d4d4d4;
++     display: block;
++    margin-left: auto;
++    margin-right: auto;
+ }
+ .entry-meta {
+-  font-size: 11px;
++  font-size: 14px;
+   color: grey;
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: lighter;
+ }
+ .entry-meta a {
+-  color: #715a32;
++  color: #3171b9;
+   text-decoration: none;
+ }
+ .entry-meta a:hover {
+   text-decoration: underline;
+ }
+ #nav-below {
+-  background: #cec0b1;
++  background: #C9E6F5;
+   padding: 10px;
+ }
+ /* Sidebar
+ -------------------------------------------------------*/
+ #secondary a,
+ #footer-sidebar a {
+-  color: #69583a;
++  color: #0c304a;
+   text-decoration: none;
+ }
+ #secondary a:hover,
+ #footer-sidebar a:hover {
+-  color: #a36700;
++  color: #1c6ba2;
+ }
+ #secondary .widget-title,
+ #footer-sidebar .widget-title {
+-  background: #100d0a;
+-  color: #825e21;
++  background: #C9E6F5;.homepage-article h1.entry-title a
++  color: #1C6BA2;
+   padding: 10px;
+   font-size: 18px;
+   margin-bottom: 10px;
+@@ -433,7 +437,7 @@ h2#page-title:first-letter,
+ }
+ #colophon a {
+   text-decoration: none;
+-  color: #825e21;
++  color: #1c6ba2;
+ }
+ #colophon .site-info {
+   float: left;
+@@ -450,7 +454,7 @@ h2#page-title:first-letter,
+ }
+ .search article,
+ .archive article {
+-  background: #ece5be;
++  background: #ffffff;
+   padding: 15px;
+ }
+ .search h1.entry-title,
+@@ -481,7 +485,7 @@ h2#page-title:first-letter,
+   display: block;
+   margin: auto;
+   max-width: 50%;
+-  border-bottom: solid 4px #8a6119;
++  border-bottom: solid 4px #1c6ba2;
+   box-shadow: 0px -1px 9px #666666;
+ }
+ .search .page-title {
+@@ -556,7 +560,7 @@ h2#page-title:first-letter,
+ 
+   border-left-width: 0;
+   display: inline-block;
+-  color: #69583a;
++  color: #0c304a;
+ }
+ .pagination ul  > li:first-child  > a,
+ .pagination ul  > li:first-child  > span {

@@ -1,0 +1,41 @@
+---
+version: '2'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./data/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+      - ./.data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    build: ./docker/web
+    depends_on:
+      - db
+    links:
+      - db:wordpress_db
+    ports:
+      - 8087:80
+    volumes:
+      - ./data/uploads:/var/www/html/wp-content/uploads
+    environment:
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_HOST: wordpress_db
+      WORDPRESS_WP_HOME: http://localhost:8087
+      WORDPRESS_WP_SITEURL: http://localhost:8087
+      WORDPRESS_AUTH_KEY: ''
+      WORDPRESS_SECURE_AUTH_KEY: ''
+      WORDPRESS_LOGGED_IN_KEY: ''
+      WORDPRESS_NONCE_KEY: ''
+      WORDPRESS_AUTH_SALT: ''
+      WORDPRESS_SECURE_AUTH_SALT: ''
+      WORDPRESS_LOGGED_IN_SALT: ''
+      WORDPRESS_NONCE_SALT: ''
+      WORDPRESS_TABLE_PREFIX: wp_

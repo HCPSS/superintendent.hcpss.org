@@ -1,0 +1,40 @@
+---
+projects:
+  - provider: git
+    source: https://github.com/WordPress/WordPress.git
+    version: tags/4.8
+    tags: ["blocking", "sticky"]
+
+  # AddThis
+  - provider: zip
+    source: https://downloads.wordpress.org/plugin/addthis.5.3.6.zip
+    destination: wp-content/plugins
+
+  # Akismet
+  - provider: zip
+    source: https://downloads.wordpress.org/plugin/akismet.3.3.3.zip
+    destination: wp-content/plugins
+
+  # Jetpack
+  - provider: zip
+    source: https://downloads.wordpress.org/plugin/jetpack.5.1.zip
+    destination: wp-content/plugins
+
+  # Sixteen theme
+  - provider: zip
+    source: https://downloads.wordpress.org/theme/sixteen.1.2.1.6.zip
+    destination: wp-content/themes
+
+  # Overwrite some images in the theme
+  - provider: local
+    source: "{manifest_dir}/files"
+    destination: "{destination_dir}/wp-content/themes/sixteen/images"
+
+patches:
+  - type: patch_file
+    source: "{manifest_dir}/patches/sixteen_header.php.patch"
+    destination: "{destination_dir}/wp-content/themes/sixteen/header.php"
+
+  - type: patch_file
+    source: "{manifest_dir}/patches/sixteen_main.css.patch"
+    destination: "{destination_dir}/wp-content/themes/sixteen/css/main.css"
