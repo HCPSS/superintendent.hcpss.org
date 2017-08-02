@@ -82,6 +82,11 @@ $table_prefix  = '{{ .table_prefix | default "wp_" }}';
  */
 define('WP_DEBUG', false);
 
+{{if .force_ssl}}
+$_SERVER['HTTPS'] = 'on';
+$_SERVER['SERVER_PORT'] = 443;
+{{end}}
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

@@ -15,7 +15,8 @@
 	\"secure_auth_salt\": \"$WORDPRESS_SECURE_AUTH_SALT\",
 	\"logged_in_salt\":   \"$WORDPRESS_LOGGED_IN_SALT\",
 	\"nonce_salt\":       \"$WORDPRESS_NONCE_SALT\",
-	\"table_prefix\":     \"$WORDPRESS_TABLE_PREFIX\"
+	\"table_prefix\":     \"$WORDPRESS_TABLE_PREFIX\",
+	\"force_ssl\":        ${WORDPRESS_FORCE_SSL:-false}
 }'"
 
 exec "$@"
