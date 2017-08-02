@@ -27,7 +27,7 @@ projects:
 
   # Overwrite some images in the theme
   - provider: local
-    source: "{manifest_dir}/files"
+    source: "{manifest_dir}/images"
     destination: "{destination_dir}/wp-content/themes/sixteen/images"
 
 patches:

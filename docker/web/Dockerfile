@@ -18,6 +18,8 @@ RUN apt-get update && apt-get install -y \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/* \
 	&& a2enmod rewrite
 
+COPY config/000-default.conf /etc/apache2/sites-available/000-default.conf
+
 COPY manifest /srv/manifest
 
 # Assemble Wordpress
