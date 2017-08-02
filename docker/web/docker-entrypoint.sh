@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+chown -R www-data:www-data /var/www/html/wp-content/uploads
+
 /bin/bash -c "twit /srv/templates/wp-config.php.tpl /var/www/html/wp-config.php -n --params='{
 	\"db_name\":          \"$WORDPRESS_DB_NAME\",
 	\"db_user\":          \"$WORDPRESS_DB_USER\",
