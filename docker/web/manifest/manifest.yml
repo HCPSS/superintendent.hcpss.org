@@ -2,7 +2,7 @@
 projects:
   - provider: git
     source: https://github.com/WordPress/WordPress.git
-    version: tags/4.8.2
+    version: tags/4.8.3
     tags: ["blocking", "sticky"]
 
   # AddThis
