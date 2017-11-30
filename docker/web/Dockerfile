@@ -3,9 +3,9 @@ FROM ubuntu:xenial
 MAINTAINER brendan_anderson@hcpss.org
 
 LABEL vendor="Howard County Public School System" \
-	org.hcpss.superintendent.version="1.0.3" \
+	org.hcpss.superintendent.version="1.0.4" \
 	org.hcpss.superintendent.name="web" \
-	org.hcpss.superintendent.wordpress_version="4.8.3"
+	org.hcpss.superintendent.wordpress_version="4.9.1"
 
 # Install PHP and Apache
 RUN apt-get update && apt-get install -y \
