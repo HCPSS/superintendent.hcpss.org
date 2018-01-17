@@ -3,7 +3,7 @@ FROM ubuntu:xenial
 MAINTAINER brendan_anderson@hcpss.org
 
 LABEL vendor="Howard County Public School System" \
-	org.hcpss.superintendent.version="1.0.2" \
+	org.hcpss.superintendent.version="1.0.5" \
 	org.hcpss.superintendent.name="web" \
 	org.hcpss.superintendent.wordpress_version="4.9.2"
 
