@@ -3,9 +3,9 @@ FROM ubuntu:xenial
 MAINTAINER brendan_anderson@hcpss.org
 
 LABEL vendor="Howard County Public School System" \
-	org.hcpss.superintendent.version="1.0.5" \
+	org.hcpss.superintendent.version="1.0.6" \
 	org.hcpss.superintendent.name="web" \
-	org.hcpss.superintendent.wordpress_version="4.9.2"
+	org.hcpss.superintendent.wordpress_version="4.9.5"
 
 # Install PHP and Apache
 RUN apt-get update && apt-get install -y \
@@ -27,7 +27,7 @@ RUN buildDeps="wget patch git unzip" \
 	&& apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y $buildDeps \
 	&& wget https://github.com/HCPSS/tasc/releases/download/v0.2.2/tasc-linux-amd64 \
-		-O /usr/local/bin/tasc --secure-protocol=TLSv1 \
+		-O /usr/local/bin/tasc \
 	&& chmod u+x /usr/local/bin/tasc \
 	&& rm /var/www/html/index.html \
 	&& tasc -manifest=/srv/manifest/manifest.yml -destination=/var/www/html \
@@ -39,7 +39,7 @@ RUN buildDeps="wget" \
 	&& apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y $buildDeps \
 	&& wget https://github.com/bander2/twit/releases/download/1.1.0/twit-linux-amd64 \
-		-O /usr/local/bin/twit --secure-protocol=TLSv1 \
+		-O /usr/local/bin/twit \
 	&& chmod u+x /usr/local/bin/twit \
 	&& apt-get remove -y $buildDeps \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
